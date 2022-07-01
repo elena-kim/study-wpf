@@ -31,3 +31,30 @@ public static readonly DependencyProperty RowProperty =
                       new PropertyChangedCallback(OnCellAttachedPropertyChanged)),
               new ValidateValueCallback(IsIntValueNotNegative));
 ```
+
+<br>
+
+> Example
+```csharp
+public class Aquarium : UIElement
+{
+    // Register an attached dependency property with the specified
+    // property name, property type, owner type, and property metadata.
+    public static readonly DependencyProperty HasFishProperty =
+        DependencyProperty.RegisterAttached(
+          "HasFish",
+          typeof(bool),
+          typeof(Aquarium),
+          new FrameworkPropertyMetadata(defaultValue: false,
+              flags: FrameworkPropertyMetadataOptions.AffectsRender)
+        );
+
+    // Declare a get accessor method.
+    public static bool GetHasFish(UIElement target) =>
+        (bool)target.GetValue(HasFishProperty);
+
+    // Declare a set accessor method.
+    public static void SetHasFish(UIElement target, bool value) =>
+        target.SetValue(HasFishProperty, value);
+}
+```

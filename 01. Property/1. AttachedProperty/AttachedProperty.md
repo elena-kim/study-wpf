@@ -6,7 +6,7 @@ Panel.ZIndex 또는 Grid.Row와 같은 프로퍼티는 Button이나 TextBox 같�
 
 DP와 다르게 static 메서드 형태로 Get / Set 을 정의하는데, 이는 다른 인스턴스에서 호출되어야 하기 때문이다.
 
-> ex. [Grid의 Column과 Row](https://github.com/dotnet/wpf/blob/main/src/Microsoft.DotNet.Wpf/src/PresentationFramework/System/Windows/Controls/Grid.cs)
+> [Grid의 Column과 Row](https://github.com/dotnet/wpf/blob/main/src/Microsoft.DotNet.Wpf/src/PresentationFramework/System/Windows/Controls/Grid.cs)
 
 ```csharp
 [CommonDependencyProperty]

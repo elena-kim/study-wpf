@@ -64,3 +64,13 @@ namespace PrismCommandSample
 ```
 `!string.IsNullOrEmpty(InputText)` 조건이 맞으면 `OnClick()` 실행됨.  
 `InputText` 속성 변경을 체크해서 **`DelegateCommandBase.RaiseCanExecutechanged`** 를 호출함.
+
+<br>
+
+|string.IsNullOrEmpty(InputText) == true|string.IsNullOrEmpty(InputText) == false|
+|:----:|:----:|
+|![][image1]|![][image2]|
+
+[image1]: https://user-images.githubusercontent.com/74305823/177899124-3ea20685-e922-47a2-a4ac-e1571adc77a6.png
+[image2]: https://user-images.githubusercontent.com/74305823/177899140-f5aafaeb-4f6b-4582-943b-e6302cb4b82c.png
+

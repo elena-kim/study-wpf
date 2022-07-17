@@ -1,2 +1,2 @@
-## StaticResourceBinding
+## StaticResource Binding
  

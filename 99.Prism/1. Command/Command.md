@@ -73,4 +73,3 @@ namespace PrismCommandSample
 
 [image1]: https://user-images.githubusercontent.com/74305823/177899124-3ea20685-e922-47a2-a4ac-e1571adc77a6.png
 [image2]: https://user-images.githubusercontent.com/74305823/177899140-f5aafaeb-4f6b-4582-943b-e6302cb4b82c.png
-

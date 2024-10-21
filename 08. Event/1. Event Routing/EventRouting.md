@@ -27,6 +27,8 @@ WPF의 이벤트 라우팅 모델은 자동으로 이벤트를 상위 객체로 
 5. intermediate element #1의 `MouseDown` 버블링 이벤트
 6. Root element의 `MouseDown` 버블링 이벤트
 
+<br/>
+
 ```csharp
 public delegate void RoutedEventHandler(object sender, RoutedEventArgs e);
 ```

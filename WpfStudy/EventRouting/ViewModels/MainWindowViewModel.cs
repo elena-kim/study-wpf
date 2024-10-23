@@ -13,12 +13,7 @@ namespace EventRouting.ViewModels
         public bool IsTunnelingTest
         {
             get { return _isTunnelingTest; }
-            set { SetProperty(ref _isTunnelingTest, value, OnPropertyChanged); }
-        }
-
-        private void OnPropertyChanged()
-        {
-            TestTitle = _isTunnelingTest ? "Tunneling" : "Bubbling";
+            set { SetProperty(ref _isTunnelingTest, value, OnIsTunnelingTestChanged); }
         }
 
         private string _testTitle = "Bubbling";
@@ -66,6 +61,14 @@ namespace EventRouting.ViewModels
             LabelPreviewMouseDownCommand = new DelegateCommand(OnLabelPreviewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
             GridPreviewMouseDownCommand = new DelegateCommand(OnGridPreivewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
             BorderPreviewMouseDownCommand = new DelegateCommand(OnBorderPreivewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
+        }
+
+        /// <summary>
+        /// 터널링 테스트 여부 변경 이벤트
+        /// </summary>
+        private void OnIsTunnelingTestChanged()
+        {
+            TestTitle = _isTunnelingTest ? "Tunneling" : "Bubbling";
         }
 
         /// <summary>

@@ -35,20 +35,20 @@
             Background="#5C77FF">
             <b:Interaction.Triggers>
                 <b:EventTrigger EventName="MouseDown">
-                    <b:InvokeCommandAction Command="{Binding BorderMouseDownCommand}" />
+                    <b:InvokeCommandAction Command="{Binding MouseDownCommand}" CommandParameter="Border" />
                 </b:EventTrigger>
                 <b:EventTrigger EventName="PreviewMouseDown">
-                    <b:InvokeCommandAction Command="{Binding BorderPreviewMouseDownCommand}" />
+                    <b:InvokeCommandAction Command="{Binding PreviewMouseDownCommand}" CommandParameter="Border" />
                 </b:EventTrigger>
             </b:Interaction.Triggers>
 
             <Grid Margin="40" Background="#8599FF">
                 <b:Interaction.Triggers>
                     <b:EventTrigger EventName="MouseDown">
-                        <b:InvokeCommandAction Command="{Binding GridMouseDownCommand}" />
+                        <b:InvokeCommandAction Command="{Binding MouseDownCommand}" CommandParameter="Grid" />
                     </b:EventTrigger>
                     <b:EventTrigger EventName="PreviewMouseDown">
-                        <b:InvokeCommandAction Command="{Binding GridPreviewMouseDownCommand}" />
+                        <b:InvokeCommandAction Command="{Binding PreviewMouseDownCommand}" CommandParameter="Grid" />
                     </b:EventTrigger>
                 </b:Interaction.Triggers>
                 <TextBlock
@@ -64,10 +64,10 @@
                     FontWeight="Bold">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="MouseDown">
-                            <b:InvokeCommandAction Command="{Binding LabelMouseDownCommand}" />
+                            <b:InvokeCommandAction Command="{Binding MouseDownCommand}" CommandParameter="Label" />
                         </b:EventTrigger>
                         <b:EventTrigger EventName="PreviewMouseDown">
-                            <b:InvokeCommandAction Command="{Binding LabelPreviewMouseDownCommand}" />
+                            <b:InvokeCommandAction Command="{Binding PreviewMouseDownCommand}" CommandParameter="Label" />
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                 </Label>

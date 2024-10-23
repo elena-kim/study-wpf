@@ -27,40 +27,18 @@ namespace EventRouting.ViewModels
         }
 
         /// <summary>
-        /// Label MouseDown 커맨드
+        /// MouseDown 커맨드
         /// </summary>
-        public ICommand LabelMouseDownCommand { get; set; }
+        public ICommand MouseDownCommand { get; set; }
         /// <summary>
-        /// Grid MouseDown 커맨드
+        /// PreivewMouseDown 커맨드
         /// </summary>
-        public ICommand GridMouseDownCommand { get; set; }
-        /// <summary>
-        /// Border MouseDown 커맨드
-        /// </summary>
-        public ICommand BorderMouseDownCommand { get; set; }
-        /// <summary>
-        /// Label PreivewMouseDown 커맨드
-        /// </summary>
-        public ICommand LabelPreviewMouseDownCommand { get; set; }
-        /// <summary>
-        /// Grid PreivewMouseDown 커맨드
-        /// </summary>
-        public ICommand GridPreviewMouseDownCommand { get; set; }
-        /// <summary>
-        /// Border PreivewMouseDown 커맨드
-        /// </summary>
-        public ICommand BorderPreviewMouseDownCommand { get; set; }
+        public ICommand PreviewMouseDownCommand { get; set; }
 
         public MainWindowViewModel() 
         {
-            //MouseDown
-            LabelMouseDownCommand = new DelegateCommand(OnLabelMouseDown, () => !IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
-            GridMouseDownCommand = new DelegateCommand(OnGridMouseDown, () => !IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
-            BorderMouseDownCommand = new DelegateCommand(OnBorderMouseDown, () => !IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
-            //PreviewMouseDown
-            LabelPreviewMouseDownCommand = new DelegateCommand(OnLabelPreviewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
-            GridPreviewMouseDownCommand = new DelegateCommand(OnGridPreivewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
-            BorderPreviewMouseDownCommand = new DelegateCommand(OnBorderPreivewMouseDown, () => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
+            MouseDownCommand = new DelegateCommand<string>(OnMouseDown, (str) => !IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
+            PreviewMouseDownCommand = new DelegateCommand<string>(OnPreviewMouseDown, (str) => IsTunnelingTest).ObservesProperty(() => IsTunnelingTest);
         }
 
         /// <summary>
@@ -72,51 +50,19 @@ namespace EventRouting.ViewModels
         }
 
         /// <summary>
-        /// Label MouseDown Event
+        /// MouseDown Event
         /// </summary>
-        public void OnLabelMouseDown()
+        public void OnMouseDown(string str)
         {
-            MessageBox.Show("Label Mouse Down");
+            MessageBox.Show($"{str} Mouse Down");
         }
 
         /// <summary>
-        /// Grid MouseDown Event
+        /// Preview MouseDown Event
         /// </summary>
-        public void OnGridMouseDown()
+        private void OnPreviewMouseDown(string str)
         {
-            MessageBox.Show("Grid Mouse Down");
-        }
-
-        /// <summary>
-        /// Border MouseDown Event
-        /// </summary>
-        public void OnBorderMouseDown()
-        {
-            MessageBox.Show("Border Mouse Down");
-        }
-
-        /// <summary>
-        /// Label Preview MouseDown Event
-        /// </summary>
-        private void OnLabelPreviewMouseDown()
-        {
-            MessageBox.Show("Label Preview Mouse Down");
-        }
-
-        /// <summary>
-        /// Grid PreivewMouseDown Event
-        /// </summary>
-        private void OnGridPreivewMouseDown()
-        {
-            MessageBox.Show("Grid Preview Mouse Down");
-        }
-
-        /// <summary>
-        /// Border PreivewMouseDown Event
-        /// </summary>
-        private void OnBorderPreivewMouseDown()
-        {
-            MessageBox.Show("Border Preview Mouse Down");
+            MessageBox.Show($"{str} Preview Mouse Down");
         }
     }
 }

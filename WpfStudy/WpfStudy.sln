@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethodPattern", "Fac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryPattern", "AbstractFactoryPattern\AbstractFactoryPattern.csproj", "{755046E0-117C-406B-9454-82B6A39BBD7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "BuilderPattern\BuilderPattern.csproj", "{A280D402-F39C-4945-89D3-319617B86CE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderPattern", "BuilderPattern\BuilderPattern.csproj", "{A280D402-F39C-4945-89D3-319617B86CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDependencyInjection", "DotNetDependencyInjection\DotNetDependencyInjection.csproj", "{B4CB8FD5-39F8-4873-8BEE-9584B15AAC70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A280D402-F39C-4945-89D3-319617B86CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A280D402-F39C-4945-89D3-319617B86CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A280D402-F39C-4945-89D3-319617B86CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4CB8FD5-39F8-4873-8BEE-9584B15AAC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CB8FD5-39F8-4873-8BEE-9584B15AAC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CB8FD5-39F8-4873-8BEE-9584B15AAC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CB8FD5-39F8-4873-8BEE-9584B15AAC70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

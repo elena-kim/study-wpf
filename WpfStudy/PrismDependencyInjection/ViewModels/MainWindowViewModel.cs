@@ -1,14 +1,8 @@
-﻿using PrismDependencyInjection.Core;
-
-namespace PrismDependencyInjection.ViewModels
+﻿namespace PrismDependencyInjection.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class MainWindowViewModel : BindableBase
     {
         public MainWindowViewModel()
-        {
-        }
-
-        public MainWindowViewModel(IContainerProvider containerProvider) : base(containerProvider)
         {
         }
     }

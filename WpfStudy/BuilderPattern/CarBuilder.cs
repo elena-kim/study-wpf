@@ -2,8 +2,8 @@
 {
     public class CarBuilder : ICarBuilder
     {
-        private int _seats { get; set; }
-        private string _engine { get; set; }
+        private int _seats;
+        private string _engine;
 
         public ICarBuilder SetEngine(string engine)
         {

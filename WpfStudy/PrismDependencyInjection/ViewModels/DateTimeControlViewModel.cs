@@ -1,9 +1,12 @@
-﻿using PrismDependencyInjection.Core;
+﻿using PrismDependencyInjection.Services;
+using System.Windows.Input;
 
 namespace PrismDependencyInjection.ViewModels
 {
-    public class DateTimeControlViewModel : ViewModelBase
+    public class DateTimeControlViewModel : BindableBase
     {
+        private readonly IDateTimeService _dateTimeService;
+
         private string _dateTimeString = string.Empty;
         /// <summary>
         /// 시간 문자열
@@ -14,21 +17,28 @@ namespace PrismDependencyInjection.ViewModels
             set => SetProperty(ref _dateTimeString, value);
         }
 
+        /// <summary>
+        /// Button Click Command
+        /// </summary>
+        public ICommand ButtonClickCommand { get; set; }
+
         public DateTimeControlViewModel()
         {
 
         }
 
-        public DateTimeControlViewModel(IContainerProvider containerProvider) : base(containerProvider)
+        public DateTimeControlViewModel(IDateTimeService dateTimeService)
         {
+            _dateTimeService = dateTimeService;
+            ButtonClickCommand = new DelegateCommand(OnButtonClick);
         }
 
         /// <summary>
         /// Button Click Command Event
         /// </summary>
-        protected override void OnButtonClick(object _)
+        private void OnButtonClick()
         {
-            DateTimeString = DateTimeService.GetDateTimeString();
+            DateTimeString = _dateTimeService.GetDateTimeString();
         }
     }
 }

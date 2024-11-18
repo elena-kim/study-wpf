@@ -1,9 +1,12 @@
-﻿using PrismDependencyInjection.Core;
+﻿using PrismDependencyInjection.Services;
+using System.Windows.Input;
 
 namespace PrismDependencyInjection.ViewModels
 {
-    public class MessageControlViewModel : ViewModelBase
+    public class MessageControlViewModel : BindableBase
     {
+        private readonly IMessageService _messageService;
+
         private string _message = string.Empty;
         /// <summary>
         /// 메시지
@@ -14,21 +17,25 @@ namespace PrismDependencyInjection.ViewModels
             set => SetProperty(ref _message, value);
         }
 
+        /// <summary>
+        /// Button Click Command
+        /// </summary>
+        public ICommand ButtonClickCommand { get; set; }
+
         public MessageControlViewModel()
         {
 
         }
 
-        public MessageControlViewModel(IContainerProvider containerProvider) : base(containerProvider)
+        public MessageControlViewModel(IMessageService messageService)
         {
+            _messageService = messageService;
+            ButtonClickCommand = new DelegateCommand<string>(OnButtonClick);
         }
 
-        protected override void OnButtonClick(object obj)
+        private void OnButtonClick(string str)
         {
-            if (obj is string str)
-            {
-                Message = MessageService.GetMessage(str);
-            }
+            Message = _messageService.GetMessage(str);
         }
     }
 }

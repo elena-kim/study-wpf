@@ -1,5 +1,4 @@
-﻿using PrismDependencyInjection.Core;
-using PrismDependencyInjection.Services;
+﻿using PrismDependencyInjection.Services;
 using System.Windows;
 using PrismDependencyInjection.Views;
 
@@ -16,7 +15,7 @@ namespace PrismDependencyInjection
             containerRegistry.Register<IDateTimeService, DateTimeService>();
             containerRegistry.Register<IMessageService, MessageService>();
             // singleton
-            containerRegistry.RegisterSingleton<IViewModelBase, ViewModelBase>();
+            //containerRegistry.RegisterSingleton<IViewModelBase, ViewModelBase>();
         }
 
         protected override Window CreateShell()

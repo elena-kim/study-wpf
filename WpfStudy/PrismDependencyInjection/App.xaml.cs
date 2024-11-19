@@ -14,8 +14,6 @@ namespace PrismDependencyInjection
             // transient
             containerRegistry.Register<IDateTimeService, DateTimeService>();
             containerRegistry.Register<IMessageService, MessageService>();
-            // singleton
-            //containerRegistry.RegisterSingleton<IViewModelBase, ViewModelBase>();
         }
 
         protected override Window CreateShell()

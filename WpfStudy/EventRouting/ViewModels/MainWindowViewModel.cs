@@ -12,8 +12,8 @@ namespace EventRouting.ViewModels
         /// <remarks>true: 터널링 테스트, false: 버블링 테스트</remarks>
         public bool IsTunnelingTest
         {
-            get { return _isTunnelingTest; }
-            set { SetProperty(ref _isTunnelingTest, value, OnIsTunnelingTestChanged); }
+            get => _isTunnelingTest;
+            set => SetProperty(ref _isTunnelingTest, value, OnIsTunnelingTestChanged);
         }
 
         private string _testTitle = "Bubbling";
@@ -22,8 +22,8 @@ namespace EventRouting.ViewModels
         /// </summary>
         public string TestTitle
         {
-            get { return _testTitle; }
-            set { SetProperty(ref _testTitle, value); }
+            get => _testTitle;
+            set => SetProperty(ref _testTitle, value);
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace EventRouting.ViewModels
         /// </summary>
         public ICommand MouseDownCommand { get; set; }
         /// <summary>
-        /// PreivewMouseDown 커맨드
+        /// PreviewMouseDown 커맨드
         /// </summary>
         public ICommand PreviewMouseDownCommand { get; set; }
 

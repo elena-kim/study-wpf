@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismDependencyInjection", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvokeCommandAction", "InvokeCommandAction\InvokeCommandAction.csproj", "{FA655745-BA19-4613-817B-49906C885CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeconstructingTuples", "DeconstructingTuples\DeconstructingTuples.csproj", "{76968409-8B5B-45F8-826A-5B42E926CCF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeconstructingTuples", "DeconstructingTuples\DeconstructingTuples.csproj", "{76968409-8B5B-45F8-826A-5B42E926CCF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "PrototypePattern\PrototypePattern.csproj", "{0A61F846-1CF6-4007-BF73-0C1381448C3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{76968409-8B5B-45F8-826A-5B42E926CCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76968409-8B5B-45F8-826A-5B42E926CCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76968409-8B5B-45F8-826A-5B42E926CCF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A61F846-1CF6-4007-BF73-0C1381448C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A61F846-1CF6-4007-BF73-0C1381448C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A61F846-1CF6-4007-BF73-0C1381448C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A61F846-1CF6-4007-BF73-0C1381448C3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
